@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[pdf]{graphviz}
+\usepackage{pdfpages}
+
+%%% Size definition (do not edit!)
+\textwidth=115mm % ???
+\textheight=40\baselineskip % 170mm
+\footskip=5mm
+
+\setcounter{page}{1}
+
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{remark}{Примечание}[section]
+\newtheorem{theorem}{Теоpема}[section]
+\newtheorem{statement}{Утвеpждение}[section]
+\newtheorem{definition}{Опpеделение}[section]
+
+\def\proof{\par\noindent{\bf Доказательство}. \ignorespaces}
+\def\endproof{{\ \vbox{\hrule\hbox{%
+   \vrule height1.3ex\hskip1.3ex\vrule}\hrule
+  }}\vspace{2mm}\par}
+
+\newcommand{\bft}{\mbox{}\vspace*{-15mm}\mbox{}\\{}\bf{}}
+\date{}
+
+
+\graphicspath{ {img/} }
+
+\newcommand{\twoimg}[2]{	\begin{figure}[h]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{#1}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{#2}
+		\end{minipage}
+	\end{figure}
+}
+
+\newcommand{\img}[2]{	
+	\begin{center}
+		\begin{figure}[h]
+			\includegraphics[width=\textwidth]{#1}
+			\caption{#2}
+		\end{figure}
+	\end{center}
+}
+\newcommand{\imgscaled}[3]{	
+	\begin{center}
+		\begin{figure}[h]
+			\includegraphics[width=#3\textwidth]{#1}
+			\caption{#2}
+		\end{figure}
+	\end{center}
+}
